@@ -97,7 +97,7 @@ app.post("/repositories/:id/like", (request, response) => {
     title: repository.title,
     url: repository.url,
     techs: repsitory.techs,
-    likes: repository.likes,
+    likes: repository.likes+1,
   };
 
   repositories[repositoryIndex] = repositoryLike;
