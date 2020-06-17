@@ -84,7 +84,7 @@ app.delete("/repositories/:id", (request, response) => {
 app.post("/repositories/:id/like", (request, response) => {
   const { id } = request.params;
 
-  const repository = repositories.find(repository => repository.id ===id);
+  const repository = repositories.find((rep) => rep.id ===id);
   repository.likes = repository + 1;
 
   return response.json(repository);
